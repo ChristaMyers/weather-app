@@ -3,9 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Weather App</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;600;700;800&display=swap"
       rel="stylesheet"
@@ -25,92 +24,79 @@
   </head>
   <body>
     <div class="container">
-      <header>
-        <form
-          class="example"
-          id="search-form"
-          action="action_page.php"
-          style="margin: auto; max-width: 620px"
+      <div class="weatherWrap">
+        <div class="weatherApp">
+          <form id="search-form" class="mb-4">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Enter Location"
+                  class="form-control searchInput shadow-sm"
+                  id="location-input"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn searchButton shadow-sm w-100"
+                  id="location-button"
+                />
+              </div>
+            </div>
+          </form>
+
+          <div class="currentDetails">
+            <h1 id="location"></h1>
+            <ul class="cityDetails">
+              <li>Last updated: <span id="date"></span></li>
+              <li id="description"></li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="d-flex currentWeather">
+                <img
+                  src="http://openweathermap.org/img/wn/04n@2x.png"
+                  id="icon"
+                  alt="broken clouds"
+                  class="float-right"
+                />
+
+                <div class="currentTemp float-right">
+                  <strong id="temperature"></strong>
+                  <small class="units"><a href="#" id="celsius-link" class="active">°C</a> | <a href="#" id="fahrenheit-link">°F</a> </small>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul class="weatherDetails">
+              </br>
+                <li>Wind: <span id="wind">1 </span> KM/H</li>
+                <li>Humidity: <span id="humidity">59</span>%</li>
+                <!-- <li id="pressure">Pressure: 1022 hPA</li> -->
+              </ul>
+            </div>
+          </div>
+          </div>
+
+        <small class="openSource"
+          ><a
+            href="https://github.com/ChristaMyers/weather-app"
+            target="_blank"
+          >
+            Open source code</a
+          >
+          by Christa Myers &amp; hosted on
+          <a
+            href="https://mystifying-wright-6bbbe8.netlify.app/"
+            target="_blank"
+            >Netlify</a
+          ></small
         >
-          <input type="text" placeholder="Search.." name="search" id="search-input" />
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-      </header>
-      <section>
-        <h1>Austin, Texas</h1>
-        <h2>Date</h2>
-        <h3 id="weather-type">Sunny</h2>
-        <p class="today-temp" id="current-temp">75°</p>
-        <!-- <img src="media/sun.svg" alt="" /> -->
-      </section>
-      <hr />
-      <footer>
-        <div class="row">
-          <div class="col-3"><button>Today</button></div>
-          <div class="col-3"><button>Tomorrow</button></div>
-          <div class="col-3"><button>Sunday</button></div>
-          <div class="col-3"><button>Monday</button></div>
-        </div>
-        <br />
-        <div class="row">
-          <div class="col-sm-2">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Now</h5>
-                <img src="media/sun.svg" class="sun" alt="" />
-                <p class="card-text">75°</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-2">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">12pm</h5>
-                <img src="media/sun.svg" class="sun" alt="" />
-                <p class="card-text">82°</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-2">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">1pm</h5>
-                <img src="media/sun.svg" class="sun" alt="" />
-                <p class="card-text">86°</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-2">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">2pm</h5>
-                <img src="media/sun.svg" class="sun" alt="" />
-                <p class="card-text">88°</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-2">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">3pm</h5>
-                <img src="media/sun.svg" class="sun" alt="" />
-                <p class="card-text">90°</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-2">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">4pm</h5>
-                <img src="media/sun.svg" class="sun" alt="" />
-                <p class="card-text">91°</p>
-              </div>
-            </div>
-          </div>
-          </div>
-          <a href="https://github.com/ChristaMyers/weather-app">GitHub</a>
-        </div>
-      </footer>
+      </div>
     </div>
     <script src="src/index.js"></script>
   </body>

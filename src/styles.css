@@ -1,72 +1,85 @@
-form.example input[type="text"] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: left;
-  width: 85%;
-  background: #f1f1f1;
-  margin-top: 10px;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.weatherWrap {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.weatherApp {
+  padding: 20px;
+  border: 1px solid #dadde1;
+  border-radius: 10px;
+  background: linear-gradient(#fff4be, #e69cff, #91d6ff);
+}
+
+h1 {
+  color: #878787;
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 28px;
+  text-align: center;
+}
+
+.cityDetails {
+  text-align: center;
   margin-bottom: 20px;
 }
 
-form.example button {
-  float: righ;
-  width: 15%;
-  padding: 10px;
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #878787;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
+}
+li:first-letter {
+  text-transform: capitalize;
+}
+
+.currentTemp {
+  position: relative;
+  right: 10px;
+}
+
+.currentWeather strong {
+  font-size: 64px;
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+.currentWeather .units {
+  font-size: 16px;
+  position: relative;
+  top: -33px;
+}
+
+.searchButton {
   background: #2196f3;
   color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none;
-  cursor: pointer;
-  margin-top: 10px;
-}
 
-form.example button:hover {
-  background: #0b7dda;
-}
-
-form.example::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.container {
-  background: linear-gradient(#fff4be, #e69cff, #91d6ff);
-  border-radius: 10px;
-  max-width: 800px;
-  padding: 15px 70px 50px 70px;
-}
-
-section {
-  font-family: "Karla", sans-serif;
+  border: none;
+  border-radius: 7px;
+  transition: all 200ms ease-in-out;
   text-align: center;
 }
 
-h1,
-h2 {
-  font-size: 20px;
+.currentTemp .active {
+  color: black;
+  cursor: default;
+}
+.currentTemp .active:hover {
+  text-decoration: none;
 }
 
-.today-temp {
-  font-size: 60px;
-}
-.row {
-  text-align: center;
-}
-button {
-  background: none;
-  border: none;
-}
-button:hover {
-  text-decoration: underline;
-}
-
-.sun {
-  max-width: 40px;
-}
-.card {
-  background: none;
-  border: none;
+a:link,
+a:visited {
+  text-decoration: none;
 }
